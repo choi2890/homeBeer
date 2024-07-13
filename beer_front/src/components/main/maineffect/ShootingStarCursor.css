@@ -1,0 +1,26 @@
+.star {
+  position: absolute;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
+}
+
+/* 짝수 번째 별의 페이드 아웃 애니메이션 */
+.star:nth-child(even) {
+  animation: fadeOut 0.5s forwards;
+}
+
+/* 홀수 번째 별의 페이드 아웃 애니메이션 */
+.star:nth-child(odd) {
+  animation: fadeOut 0.7s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
